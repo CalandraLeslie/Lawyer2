@@ -5,7 +5,7 @@
   "description": "A dynamic website for lawyer John Smith with animations and a smooth scrolling navbar.",
   "main": "src/index.js",
   "scripts": {
-    "build": "set \"CI=false\" && react-scripts build",
+    "build": "CI=false react-scripts build",
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
