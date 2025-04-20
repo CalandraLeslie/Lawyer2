@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Services from './components/Services/Services';
-import Contact from './components/Contact/Contact';
+import Contact from './components/Contact/Contact.js'; // Add explicit .js extension
 import './styles/global.css';
 
 function App() {
