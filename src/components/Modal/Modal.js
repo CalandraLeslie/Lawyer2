@@ -3,6 +3,7 @@ import './Modal.css';
 
 const Modal = ({ isOpen, onClose, title, children }) => {
   useEffect(() => {
+    // Prevent body scrolling when modal is open
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -15,9 +16,14 @@ const Modal = ({ isOpen, onClose, title, children }) => {
 
   if (!isOpen) return null;
 
+  // Prevent event propagation to stop shaking
+  const handleModalClick = (e) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div className="modal-overlay">
-      <div className="modal-container">
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-container" onClick={handleModalClick}>
         <div className="modal-header">
           <h2>{title}</h2>
           <button className="modal-close" onClick={onClose}>

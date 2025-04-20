@@ -1,3 +1,4 @@
+\components\Modal\Modal.css */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -20,7 +21,9 @@
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  animation: modalAppear 0.3s ease-out;
+  animation: modalAppear 0.3s ease-out forwards;
+  position: relative; /* Ensure positioning is stable */
+  transform: translate3d(0, 0, 0); /* Force GPU acceleration for smoother animation */
 }
 
 .modal-header {
@@ -33,7 +36,7 @@
 
 .modal-header h2 {
   margin: 0;
-  color: #333;
+  color: #2c5282; /* Updated to blue instead of gray */
   font-size: 1.8rem;
 }
 
@@ -44,6 +47,8 @@
   color: #777;
   cursor: pointer;
   transition: color 0.2s;
+  padding: 5px;
+  margin: -5px;
 }
 
 .modal-close:hover {
@@ -58,7 +63,7 @@
 @keyframes modalAppear {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
