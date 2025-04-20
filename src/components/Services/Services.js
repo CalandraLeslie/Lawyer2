@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import Modal from '../Modal/Modal';
-import './Services.css';
-
-// Import icons from react-icons package
+import Modal from '../Modal/Modal';  // Verify this path is correct
 import { FaBalanceScale, FaHome, FaBriefcase, FaHandshake, FaUsers, FaGavel } from 'react-icons/fa';
+import './Services.css';
 
 const Services = () => {
   const [activeModal, setActiveModal] = useState(null);
