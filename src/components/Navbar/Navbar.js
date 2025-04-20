@@ -38,21 +38,40 @@ const Navbar = () => {
           <h1>John Smith <span>Law</span></h1>
         </div>
         
-        <div className="mobile-icon" onClick={toggleMenu}>
+        <button 
+          className="mobile-icon" 
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
         
         <ul className={`navbar-menu ${mobileMenuOpen ? 'active' : ''}`}>
           <li>
-            <a onClick={() => scrollToSection('home')}>Home</a>
+            <button 
+              className="nav-link" 
+              onClick={() => scrollToSection('home')}
+            >
+              Home
+            </button>
           </li>
           <li>
-            <a onClick={() => scrollToSection('about')}>About</a>
+            <button 
+              className="nav-link" 
+              onClick={() => scrollToSection('about')}
+            >
+              About
+            </button>
           </li>
           <li>
-            <a onClick={() => scrollToSection('services')}>Services</a>
+            <button 
+              className="nav-link" 
+              onClick={() => scrollToSection('services')}
+            >
+              Services
+            </button>
           </li>
           <li>
             <button 

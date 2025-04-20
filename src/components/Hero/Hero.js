@@ -42,19 +42,13 @@ const Hero = () => {
           <h2>Modern Solutions for Complex Legal Matters</h2>
           <p>Dedicated to providing exceptional legal services with a progressive approach</p>
           <div className="hero-buttons">
-            <a onClick={() => scrollToSection('contact')} className="btn btn-primary">
+            <button onClick={() => scrollToSection('contact')} className="btn btn-primary">
               Free Consultation
-            </a>
-            <a onClick={() => scrollToSection('services')} className="btn btn-secondary">
+            </button>
+            <button onClick={() => scrollToSection('services')} className="btn btn-secondary">
               Our Services
-            </a>
+            </button>
           </div>
-          <button 
-            className="nav-link" 
-            onClick={() => scrollToSection('contact')}
-          >
-            Contact
-          </button>
         </div>
         <div className="hero-shape"></div>
         <div className="hero-shape-2"></div>
