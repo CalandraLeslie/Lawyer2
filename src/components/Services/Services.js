@@ -149,24 +149,27 @@ const Services = () => {
               >
                 Learn More
               </button>
-              
-              <Modal 
-                isOpen={activeModal === service.id}
-                onClose={closeModal}
-                title={service.title}
-              >
-                <div className="service-detail">
-                  <div className="service-detail-icon">{service.icon}</div>
-                  <div className="service-detail-content">
-                    {service.fullDesc.split('\n\n').map((paragraph, idx) => (
-                      <p key={idx}>{paragraph}</p>
-                    ))}
-                  </div>
-                </div>
-              </Modal>
             </div>
           ))}
         </div>
+
+        {services.map(service => (
+          <Modal 
+            key={service.id}
+            isOpen={activeModal === service.id}
+            onClose={closeModal}
+            title={service.title}
+          >
+            <div className="service-detail">
+              <div className="service-detail-icon">{service.icon}</div>
+              <div className="service-detail-content">
+                {service.fullDesc.split('\n\n').map((paragraph, idx) => (
+                  <p key={idx}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          </Modal>
+        ))}
       </div>
     </section>
   );
