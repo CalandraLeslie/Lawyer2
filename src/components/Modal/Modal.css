@@ -1,4 +1,4 @@
-\components\Modal\Modal.css */
+Lawyer\src\components\Modal\Modal.css */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -22,8 +22,8 @@
   overflow-y: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   animation: modalAppear 0.3s ease-out forwards;
-  position: relative; /* Ensure positioning is stable */
-  transform: translate3d(0, 0, 0); /* Force GPU acceleration for smoother animation */
+  position: relative;
+  transform: translate3d(0, 0, 0);
 }
 
 .modal-header {
@@ -36,7 +36,7 @@
 
 .modal-header h2 {
   margin: 0;
-  color: #2c5282; /* Updated to blue instead of gray */
+  color: #2c5282;
   font-size: 1.8rem;
 }
 
@@ -48,7 +48,6 @@
   cursor: pointer;
   transition: color 0.2s;
   padding: 5px;
-  margin: -5px;
 }
 
 .modal-close:hover {

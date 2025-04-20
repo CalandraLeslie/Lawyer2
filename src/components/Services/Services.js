@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../Modal/Modal';
 import './Services.css';
 
-// Import icons (you'll need to install react-icons: npm install react-icons)
+// Import icons from react-icons package
 import { FaBalanceScale, FaHome, FaBriefcase, FaHandshake, FaUsers, FaGavel } from 'react-icons/fa';
 
 const Services = () => {
