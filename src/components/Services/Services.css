@@ -92,7 +92,7 @@
 
 .service-icon {
   font-size: 3rem;
-  color: #2c5282; /* Changed from orange to blue */
+  color: #2c5282; /* Primary blue color to match site theme */
   margin-bottom: 20px;
   width: 80px;
   height: 80px;
@@ -117,7 +117,7 @@
 
 .btn-learn-more {
   background-color: transparent;
-  color: #2c5282; /* Changed from orange to blue */
+  color: #2c5282; /* Matching blue */
   border: 2px solid #2c5282;
   padding: 8px 20px;
   border-radius: 30px;
