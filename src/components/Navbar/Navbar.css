@@ -26,6 +26,11 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-logo h1 {
+  color: #333; /* Dark color for text when navbar has background */
+}
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -36,13 +41,16 @@
 }
 
 .navbar-logo h1 {
-  color: var(--neutral);
-  font-size: 28px;
+  color: #fff;
+  margin: 0;
+  font-size: 1.75rem;
   font-weight: 700;
+  text-shadow: none; /* Remove any text shadow */
 }
 
 .navbar-logo span {
-  color: var(--accent);
+  color: #f2a365; /* Your brand accent color */
+  background: transparent; /* Ensure no background */
 }
 
 .navbar-menu {
@@ -83,6 +91,22 @@
 .navbar-menu li a:hover:after,
 .navbar-menu li a.active:after {
   width: 100%;
+}
+
+.nav-link {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-shadow: none; /* Remove any text shadow */
+}
+
+.nav-link:hover {
+  color: #f2a365; /* Your brand accent color */
 }
 
 .mobile-icon {
