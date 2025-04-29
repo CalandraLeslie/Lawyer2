@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './Hero.css';
-import { FaBalanceScale, FaGavel, FaHandshake } from 'react-icons/fa';
+import { FaBalanceScale, FaGavel, FaHandshake, FaChevronDown } from 'react-icons/fa';
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -36,26 +36,13 @@ const Hero = () => {
   return (
     <section id="home" className="hero">
       <div className="hero-container" ref={heroRef}>
+        <div className="hero-headline">
+          <h1>John Smith <span>Law Firm</span></h1>
+          <h2>Trusted Legal Counsel for Complex Matters</h2>
+        </div>
+        
         <div className="hero-content-wrapper">
-          <div className="hero-content">
-            <h1>John Smith <span>Law Firm</span></h1>
-            <h2>Trusted Legal Counsel for Complex Matters</h2>
-            
-            <div className="hero-features">
-              <div className="feature">
-                <div className="feature-icon"><FaBalanceScale /></div>
-                <p>Strategic Legal Solutions</p>
-              </div>
-              <div className="feature">
-                <div className="feature-icon"><FaGavel /></div>
-                <p>Aggressive Advocacy</p>
-              </div>
-              <div className="feature">
-                <div className="feature-icon"><FaHandshake /></div>
-                <p>Client-Centered Approach</p>
-              </div>
-            </div>
-            
+          <div className="hero-description-block">
             <p className="hero-description">
               Providing exceptional legal services with a modern approach for businesses and individuals since 2003.
             </p>
@@ -70,25 +57,51 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="hero-image">
-            <div className="hero-image-inner">
-              <img src="https://images.unsplash.com/photo-1594761046251-4d9133c0134a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Professional attorney" />
+          <div className="hero-credentials">
+            <div className="credential">
+              <span className="number">20+</span>
+              <span className="label">Years Experience</span>
             </div>
-            <div className="hero-credentials">
-              <div className="credential">
-                <span className="number">20+</span>
-                <span className="label">Years Experience</span>
+            <div className="credential">
+              <span className="number">500+</span>
+              <span className="label">Cases Won</span>
+            </div>
+            <div className="credential">
+              <span className="number">98%</span>
+              <span className="label">Client Satisfaction</span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="hero-features-wrapper">
+          <div className="hero-features">
+            <div className="feature">
+              <div className="feature-icon"><FaBalanceScale /></div>
+              <div className="feature-content">
+                <h3>Strategic Legal Solutions</h3>
+                <p>Tailored strategies for your unique legal challenges</p>
               </div>
-              <div className="credential">
-                <span className="number">500+</span>
-                <span className="label">Cases Won</span>
+            </div>
+            <div className="feature">
+              <div className="feature-icon"><FaGavel /></div>
+              <div className="feature-content">
+                <h3>Aggressive Advocacy</h3>
+                <p>Determined representation to protect your interests</p>
               </div>
-              <div className="credential">
-                <span className="number">98%</span>
-                <span className="label">Client Satisfaction</span>
+            </div>
+            <div className="feature">
+              <div className="feature-icon"><FaHandshake /></div>
+              <div className="feature-content">
+                <h3>Client-Centered Approach</h3>
+                <p>Personalized attention to your specific needs</p>
               </div>
             </div>
           </div>
+        </div>
+        
+        <div className="scroll-indicator" onClick={() => scrollToSection('about')}>
+          <span>Learn More</span>
+          <FaChevronDown />
         </div>
       </div>
     </section>
