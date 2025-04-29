@@ -38,11 +38,11 @@ const Hero = () => {
       <div className="hero-container" ref={heroRef}>
         <div className="hero-headline">
           <h1>John Smith <span>Law Firm</span></h1>
-          <h2>Trusted Legal Counsel for Complex Matters</h2>
+          <p className="hero-tagline">Trusted Legal Counsel for Complex Matters</p>
         </div>
         
         <div className="hero-content-wrapper">
-          <div className="hero-description-block">
+          <div className="hero-main-content">
             <p className="hero-description">
               Providing exceptional legal services with a modern approach for businesses and individuals since 2003.
             </p>
